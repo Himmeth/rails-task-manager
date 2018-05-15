@@ -1,0 +1,11 @@
+<h1>To Do</h1>
+
+<% @tasks.each do |task| %>
+  <h2><%= link_to "#{task.title}", task_path(task) %></h2>
+  <h3>Completed: <%= task.completed ? 'Yes' : 'No' %></h3>
+  <p><%= task.details %></p>
+<% end %>
+
+<%= link_to 'New task', '/new' %>
+
+
